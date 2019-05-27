@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package GrpcGkeExample;
+
+option java_multiple_files = true;
+option java_package = "com.mintensive.grpc_gke_example";
+option java_outer_classname = "GrpcGkeExampleProto";
+option go_package = "grpc-gke-example";
+option csharp_namespace = "GrpcGkeExample";
+option cc_enable_arenas = true;
+
+
+service ExampleService {
+    rpc Ping (PingRequest) returns (PingReply);
+}
+
+message PingRequest {
+}
+
+message PingReply {
+    string message = 1;
+}
